@@ -1,0 +1,117 @@
+.who-we-are{
+
+    padding:120px 0;
+
+}
+
+.who-container{
+
+    width:min(1400px,90%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.image-placeholder{
+
+    width:100%;
+    height:650px;
+
+    border-radius:30px;
+
+    background:#ddd;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.5rem;
+
+}
+
+.section-subtitle{
+
+    letter-spacing:4px;
+
+    color:var(--color-primary);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.who-content h2{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    color:var(--color-primary-dark);
+
+    margin:25px 0;
+
+}
+
+.who-content p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:var(--color-text-light);
+
+    margin-bottom:20px;
+
+}
+
+.btn-primary{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:16px 35px;
+
+    background:var(--color-primary-dark);
+
+    color:white;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--color-primary);
+
+}
+
+@media(max-width:992px){
+
+.who-container{
+
+grid-template-columns:1fr;
+
+}
+
+.who-content{
+
+text-align:center;
+
+}
+
+.who-content h2{
+
+font-size:3rem;
+
+}
+
+}

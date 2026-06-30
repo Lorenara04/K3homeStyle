@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "about": "Nuestra Historia",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "button": "Agenda tu asesoría"
+  }
+}

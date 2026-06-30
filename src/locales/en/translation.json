@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "Our Story",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "button": "Book Consultation"
+  }
+}

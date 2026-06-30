@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "about": "Notre Histoire",
+    "services": "Services",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "button": "Réserver une consultation"
+  }
+}

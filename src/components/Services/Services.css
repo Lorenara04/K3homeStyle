@@ -1,0 +1,264 @@
+/*=========================
+SERVICES
+=========================*/
+
+.services{
+    padding:120px 8%;
+    background:#ffffff;
+}
+
+.services .container{
+    max-width:1300px;
+    margin:auto;
+}
+
+/*=========================
+HEADER
+=========================*/
+
+.services-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#ECE7E1;
+
+    color:#8B7355;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.services-header h2{
+
+    margin-top:20px;
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    font-family:"Playfair Display",serif;
+
+    color:#2E2E2E;
+
+    line-height:1.2;
+
+}
+
+.services-header h2 span{
+
+    color:#8B7355;
+
+}
+
+.services-header p{
+
+    max-width:720px;
+
+    margin:20px auto 0;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/*=========================
+GRID
+=========================*/
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*=========================
+CARD
+=========================*/
+
+.service-card{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    border:1px solid #ECE7E1;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.10);
+
+}
+
+.service-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    background:#ECE7E1;
+
+    color:#8B7355;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+
+}
+
+.service-card:hover .service-icon{
+
+    background:#8B7355;
+
+    color:white;
+
+}
+
+.service-card h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:16px;
+
+    color:#2E2E2E;
+
+    font-family:"Playfair Display",serif;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+
+/*=========================
+BUTTON
+=========================*/
+
+.service-btn{
+
+    border:none;
+
+    background:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#8B7355;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:1rem;
+
+}
+
+.service-btn:hover{
+
+    gap:14px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:1100px){
+
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.services{
+
+padding:90px 6%;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-card{
+
+padding:32px;
+
+}
+
+.services-header{
+
+margin-bottom:50px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.services-header h2{
+
+font-size:2rem;
+
+}
+
+.service-card{
+
+padding:28px;
+
+}
+
+}

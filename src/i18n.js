@@ -11,6 +11,13 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
+    
+    detection: {
+      // Remover "navigator" para que no lea el idioma del navegador de la persona
+      // Así siempre cargará en "en" (inglés) por defecto, a menos que la persona lo cambie manualmente.
+      order: ['localStorage', 'cookie', 'htmlTag'],
+      caches: ['localStorage']
+    },
 
     resources: {
       en: {

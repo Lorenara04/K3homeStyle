@@ -1,9 +1,10 @@
 import "./Contact.css";
-
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function Contact() {
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,14 +25,14 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        alert("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+        alert(t("contact.success"));
         e.target.reset(); // Limpia el formulario después de enviar
       } else {
-        alert("Ocurrió un error al enviar el mensaje. Intenta nuevamente.");
+        alert(t("contact.error"));
       }
     } catch (error) {
       console.error(error);
-      alert("Error de conexión al enviar el mensaje.");
+      alert(t("contact.conn_error"));
     }
   };
 
@@ -41,22 +42,12 @@ export default function Contact() {
 
         {/* HEADER */}
         <div className="section-header">
-
-          <span className="section-tag">
-            CONTACT US
-          </span>
-
+          <span className="section-tag">{t("contact.tag")}</span>
           <h2>
-            Let's Create a More Beautiful
-            <span> Home Together</span>
+            {t("contact.title1")}
+            <span> {t("contact.title2")}</span>
           </h2>
-
-          <p>
-            Ready to transform your home into a functional,
-            organized and beautiful space? We'd love to hear
-            about your project and help bring your vision to life.
-          </p>
-
+          <p>{t("contact.desc")}</p>
         </div>
 
         {/* CONTENT */}
@@ -68,7 +59,7 @@ export default function Contact() {
             <div className="info-card">
               <Mail size={26} />
               <div>
-                <h4>Email</h4>
+                <h4>{t("contact.email")}</h4>
                 <p>info@k3homestyle.com</p>
               </div>
             </div>
@@ -76,7 +67,7 @@ export default function Contact() {
             <div className="info-card">
               <Phone size={26} />
               <div>
-                <h4>Phone</h4>
+                <h4>{t("contact.phone")}</h4>
                 <p>(409) 651-3454</p>
               </div>
             </div>
@@ -84,27 +75,24 @@ export default function Contact() {
             <div className="info-card">
               <MapPin size={26} />
               <div>
-                <h4>Headquarters</h4>
-                <p>Beaumont, Texas</p>
+                <h4>{t("contact.hq")}</h4>
+                <p>{t("contact.hq_city")}</p>
               </div>
             </div>
 
             <div className="info-card">
               <Clock size={26} />
               <div>
-                <h4>Business Hours</h4>
-                <p>By Appointment</p>
-                <p>Flexible Scheduling</p>
+                <h4>{t("contact.hours")}</h4>
+                <p>{t("contact.hours_1")}</p>
+                <p>{t("contact.hours_2")}</p>
               </div>
             </div>
 
             {/* SOCIAL */}
             <div className="follow-us">
-
-              <h4>Follow Us</h4>
-
+              <h4>{t("contact.follow")}</h4>
               <div className="social-icons">
-
                 <a
                   href="https://www.instagram.com/k3homestyle/"
                   target="_blank"
@@ -114,7 +102,6 @@ export default function Contact() {
                   <FaInstagram size={30} />
                   <span>Instagram</span>
                 </a>
-
                 <a
                   href="https://www.tiktok.com/@k3homestyle?_r=1&_t=ZS-97gVjaGaFmC"
                   target="_blank"
@@ -124,7 +111,6 @@ export default function Contact() {
                   <FaTiktok size={30} />
                   <span>TikTok</span>
                 </a>
-
                 <a
                   href="https://www.facebook.com/k3homestyle/"
                   target="_blank"
@@ -134,9 +120,7 @@ export default function Contact() {
                   <FaFacebookF size={30} />
                   <span>Facebook</span>
                 </a>
-
               </div>
-
             </div>
 
           </div>
@@ -145,33 +129,33 @@ export default function Contact() {
           <form className="contact-form" onSubmit={handleSubmit}>
 
             <div className="input-group">
-              <label>Full Name</label>
-              <input type="text" name="name" placeholder="John Doe" required />
+              <label>{t("contact.form.name")}</label>
+              <input type="text" name="name" placeholder={t("contact.form.name_ph")} required />
             </div>
 
             <div className="input-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="you@email.com" required />
+              <label>{t("contact.form.email")}</label>
+              <input type="email" name="email" placeholder={t("contact.form.email_ph")} required />
             </div>
 
             <div className="input-group">
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="+1 000 000 0000" />
+              <label>{t("contact.form.phone")}</label>
+              <input type="tel" name="phone" placeholder={t("contact.form.phone_ph")} />
             </div>
 
             <div className="input-group">
-              <label>Message</label>
+              <label>{t("contact.form.msg")}</label>
               <textarea
                 name="message"
                 rows={6}
-                placeholder="Tell us about your project..."
+                placeholder={t("contact.form.msg_ph")}
                 required
               />
             </div>
 
             <button type="submit" className="contact-btn">
               <Send size={18} />
-              <span>Send Message</span>
+              <span>{t("contact.form.send")}</span>
             </button>
 
           </form>
@@ -180,16 +164,10 @@ export default function Contact() {
 
         {/* MAP */}
         <div className="contact-map">
-
-          <h3>
-            Proudly Serving Texas
-          </h3>
-
+          <h3>{t("contact.map_title")}</h3>
           <p>
-            K3 Home Style provides professional home
-            organization, decorating and styling services across our primary service areas, including:
+            {t("contact.map_desc")}
             <br />
-            {/* Aquí usamos la nueva clase que creamos en el CSS */}
             <span className="service-cities">
               Beaumont • Nederland • Houston • Orange • China • Port Acres • Port Neches • Austin
             </span>

@@ -1,108 +1,99 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ================= HERO (Contenedor Principal) ================= */
+
 .hero {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--color-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
+    position: relative;
+    
+    /* Ancho casi al borde para abarcar más a los lados */
+    width: 98%; 
+    max-width: 1800px; 
+    
+    /* Margen: 90px arriba (barra), auto a los lados (centro), 40px abajo */
+    margin: 90px auto 40px auto; 
+    
+    /* Proporción mejorada para que las fotos de interiores luzcan completas */
+    aspect-ratio: 16 / 8; 
+    height: auto; 
+    max-height: 85vh; 
+
+    overflow: hidden;
+    border-radius: 15px; 
 }
 
-.hero-container {
-  width: min(1400px, 90%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
+/* ================= SLIDER ================= */
+
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transform: scale(1);
+
+    transition:
+        opacity 2s ease,
+        transform 8s ease;
+
+    will-change: opacity, transform;
 }
 
-.hero-subtitle {
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1.08); 
 }
 
-.hero-title {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 1.1;
-  color: var(--color-primary-dark);
+/* ================= OVERLAY ================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .18),
+        rgba(0, 0, 0, .08)
+    );
+
+    z-index: 2;
 }
 
-.hero-description {
-  font-size: 1.1rem;
-  color: var(--color-text-light);
-  max-width: 550px;
+/* ================= RESPONSIVE ================= */
+
+/* En tablets bajamos un poco el margen superior */
+@media (max-width:992px){
+    .hero {
+        margin-top: 80px;
+    }
 }
 
-.hero-button {
-  width: fit-content;
-  padding: 16px 34px;
-  border-radius: 50px;
-  background: var(--color-primary-dark);
-  color: white;
-  font-weight: 600;
-  transition: var(--transition);
+/* En móviles horizontales / tablets pequeñas */
+@media (max-width:768px){
+    .hero {
+        margin-top: 70px;
+        width: 95%; /* Un poco menos de margen a los lados en pantallas chicas */
+        border-radius: 10px;
+    }
 }
 
-.hero-button:hover {
-  background: var(--color-primary);
-  transform: translateY(-3px);
-}
-
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 650px;
-  border-radius: 30px;
-  object-fit: cover;
-  box-shadow: var(--shadow-lg);
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media (max-width: 992px) {
-
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-content {
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-.hero-placeholder{
-    width:100%;
-    max-width:650px;
-    height:650px;
-    border-radius:30px;
-    background:#d8d8d8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#555;
-    font-size:1.2rem;
-    box-shadow:var(--shadow-lg);
-}
+/* En móviles pequeños (pantalla vertical) */
+@media (max-width:480px){
+    .hero {
+        margin-top: 60px;
+        aspect-ratio: 4 / 3; /* Más cuadrado en celulares para ver mejor las fotos */
+    }
 }

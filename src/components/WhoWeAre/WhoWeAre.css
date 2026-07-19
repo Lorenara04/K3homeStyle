@@ -1,108 +1,321 @@
+/*=========================================
+WHO WE ARE
+=========================================*/
+
 .who-we-are{
 
     padding:120px 0;
+
+    background:#F8F6F2;
+
+    overflow:hidden;
 
 }
 
 .who-container{
 
-    width:min(1400px,90%);
+    width:min(1320px,90%);
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:90px;
+
+    gap:80px;
 
     align-items:center;
+
+}
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.who-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:640px;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#E5D7C4;
+
+    box-shadow:0 18px 45px rgba(53,64,36,.08);
+
+}
+
+.who-photo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    animation:fadeZoom 4s ease-in-out;
 
 }
 
 .image-placeholder{
 
     width:100%;
-    height:650px;
 
-    border-radius:30px;
-
-    background:#ddd;
+    height:100%;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    font-size:1.5rem;
+    background:linear-gradient(
+        135deg,
+        #F5F2EC,
+        #E5D7C4
+    );
+
+    color:#354024;
+
+    font-size:1.08rem;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    padding:30px;
 
 }
 
+/*=========================================
+CONTENT
+=========================================*/
+
 .section-subtitle{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#889063;
+
+    text-transform:uppercase;
 
     letter-spacing:4px;
 
-    color:var(--color-primary);
-
-    font-size:.9rem;
+    font-size:.82rem;
 
     font-weight:600;
 
 }
 
+.who-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
 .who-content h2{
 
-    font-size:4rem;
+    max-width:560px;
 
-    line-height:1.1;
+    margin:0 0 24px;
 
-    color:var(--color-primary-dark);
+    font-family:"Playfair Display",serif;
 
-    margin:25px 0;
+    font-size: clamp(2.5rem,3.2vw,3.5rem);
+
+    font-weight:500;
+
+    line-height:1.9;
+
+    letter-spacing:-.4px;
+
+    color:#354024;
 
 }
 
 .who-content p{
 
-    font-size:1.1rem;
+    max-width:560px;
+
+    margin-bottom:18px;
+
+    color:#666666;
+
+    font-size:1.08rem;
 
     line-height:1.9;
 
-    color:var(--color-text-light);
-
-    margin-bottom:20px;
+    font-weight:400;
 
 }
+/*=========================================
+BUTTON
+=========================================*/
 
 .btn-primary{
 
-    display:inline-block;
+    display:inline-flex;
 
-    margin-top:25px;
+    align-items:center;
 
-    padding:16px 35px;
+    justify-content:center;
 
-    background:var(--color-primary-dark);
+    align-self:flex-start;
 
-    color:white;
+    margin-top:18px;
 
-    border-radius:50px;
+    padding:15px 34px;
 
-    transition:.3s;
+    border:2px solid #354024;
+
+    border-radius:999px;
+
+    background:#354024;
+
+    color:#FFFFFF;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 12px 30px rgba(53,64,36,.15);
 
 }
 
 .btn-primary:hover{
 
-    background:var(--color-primary);
+    background:#4C3D19;
+
+    border-color:#4C3D19;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 18px 40px rgba(53,64,36,.22);
+
+}
+
+/*=========================================
+ANIMATION
+=========================================*/
+
+@keyframes fadeZoom{
+
+0%{
+
+opacity:0;
+
+transform:scale(1);
+
+}
+
+12%{
+
+opacity:1;
+
+}
+
+85%{
+
+opacity:1;
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:scale(1.08);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.who-container{
+
+gap:60px;
+
+}
+
+.who-image{
+
+height:560px;
+
+}
+
+.who-content h2{
+
+font-size:2.9rem;
+
+}
 
 }
 
 @media(max-width:992px){
 
+.who-we-are{
+
+padding:100px 0;
+
+}
+
 .who-container{
 
 grid-template-columns:1fr;
 
+gap:55px;
+
+}
+
+.who-image{
+
+order:1;
+
+height:520px;
+
+max-width:700px;
+
+margin:auto;
+
 }
 
 .who-content{
+
+order:2;
+
+align-items:center;
 
 text-align:center;
 
@@ -110,7 +323,113 @@ text-align:center;
 
 .who-content h2{
 
-font-size:3rem;
+max-width:650px;
+
+font-size:2.6rem;
+
+}
+
+.who-content p{
+
+max-width:650px;
+
+}
+
+.btn-primary{
+
+align-self:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.who-we-are{
+
+padding:90px 0;
+
+}
+
+.who-container{
+
+width:92%;
+
+}
+
+.who-image{
+
+height:420px;
+
+border-radius:22px;
+
+}
+
+.who-content h2{
+
+font-size:2.2rem;
+
+}
+
+.who-content p{
+
+font-size:.98rem;
+
+line-height:1.9;
+
+}
+
+.btn-primary{
+
+padding:14px 30px;
+
+font-size:.9rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.who-we-are{
+
+padding:80px 0;
+
+}
+
+.who-image{
+
+height:320px;
+
+border-radius:18px;
+
+}
+
+.section-subtitle{
+
+font-size:.82rem;
+
+letter-spacing:3px;
+
+}
+
+.who-content h2{
+
+font-size:1.9rem;
+
+}
+
+.who-content p{
+
+font-size:.95rem;
+
+}
+
+.btn-primary{
+
+width:100%;
+
+padding:15px 24px;
 
 }
 

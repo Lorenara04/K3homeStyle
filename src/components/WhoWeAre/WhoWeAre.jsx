@@ -1,43 +1,115 @@
 import "./WhoWeAre.css";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+// ===============================
+// IMÁGENES
+// ===============================
+
+import photo1 from "../../assets/about/foto_1.jpeg";
+import photo3 from "../../assets/about/foto_3.jpeg";
+
+// ===============================
+// GALERÍA
+// ===============================
+
+const photos = [
+  photo1,
+  photo3,
+];
 
 function WhoWeAre() {
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+
+    if (!photos.length) return;
+
+    const timer = setInterval(() => {
+
+      setCurrentImage((current) => (current + 1) % photos.length);
+
+    }, 5000);
+
+    return () => clearInterval(timer);
+
+  }, []);
+
   return (
-    <section className="who-we-are" id="about">
+
+    <section
+      className="who-we-are"
+      id="about"
+    >
 
       <div className="who-container">
 
+        {/* ==========================
+            IMAGEN
+        ========================== */}
+
         <div className="who-image">
 
-          <div className="image-placeholder">
-            Imagen K3
-          </div>
+          {photos.length ? (
+
+            <img
+              src={photos[currentImage]}
+              alt="Founder of K3 Home Style"
+              className="who-photo"
+              loading="lazy"
+            />
+
+          ) : (
+
+            <div className="image-placeholder">
+
+              {t("whoWeAre.placeholder")}
+
+            </div>
+
+          )}
 
         </div>
+
+        {/* ==========================
+            CONTENIDO
+        ========================== */}
 
         <div className="who-content">
 
           <span className="section-subtitle">
-            WHO WE ARE
+
+            {t("whoWeAre.subtitle")}
+
           </span>
 
           <h2>
-            Diseñamos hogares
-            para vivir mejor.
+
+            {t("whoWeAre.title")}
+
           </h2>
 
           <p>
-            En K3 Home Style creemos que un hogar organizado
-            no solo luce mejor, también mejora la tranquilidad,
-            la productividad y la calidad de vida de quienes lo habitan.
+
+            {t("whoWeAre.p1")}
+
           </p>
 
           <p>
-            Cada proyecto es personalizado, funcional y pensado
-            para adaptarse al estilo de vida de cada cliente.
+
+            {t("whoWeAre.p2")}
+
           </p>
 
-          <a href="#contact" className="btn-primary">
-            Conoce más
+          <a
+            href="#contact"
+            className="btn-primary"
+          >
+
+            {t("whoWeAre.button")}
+
           </a>
 
         </div>
@@ -45,7 +117,9 @@ function WhoWeAre() {
       </div>
 
     </section>
+
   );
+
 }
 
 export default WhoWeAre;

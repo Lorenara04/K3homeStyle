@@ -1,44 +1,39 @@
 import "./Hero.css";
+import { useEffect, useState } from "react";
 
-function Hero() {
+export default function Hero() {
+  const images = [
+    "/images/hero/hero1.jpeg",
+    "/images/hero/hero2.jpeg",
+    "/images/hero/hero3.jpeg",
+    "/images/hero/hero4.jpeg",
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="hero">
-      <div className="hero-container">
-
-        <div className="hero-content">
-
-          <span className="hero-subtitle">
-            PROFESSIONAL HOME ORGANIZATION
-          </span>
-
-          <h1 className="hero-title">
-            Transformamos espacios,
-            <br />
-            mejoramos vidas.
-          </h1>
-
-          <p className="hero-description">
-            Creamos espacios funcionales, armoniosos y elegantes que
-            transforman la forma en que disfrutas tu hogar.
-          </p>
-
-          <a href="#contact" className="hero-button">
-            Agenda una asesoría
-          </a>
-
-        </div>
-
-        <div className="hero-image">
-
-          <div className="hero-placeholder">
-            Próximamente imagen del Hero
-          </div>
-
-        </div>
-
+    <section className="hero" id="home">
+      <div className="hero-slider">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`hero-slide ${index === current ? "active" : ""}`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          />
+        ))}
       </div>
+
+      <div className="hero-overlay"></div>
     </section>
   );
 }
-
-export default Hero;

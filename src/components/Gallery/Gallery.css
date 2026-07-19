@@ -1,279 +1,313 @@
-/*=========================
+/*=========================================
 GALLERY
-=========================*/
+=========================================*/
 
-.gallery{
-    padding:120px 8%;
-    background:#ffffff;
+.gallery {
+  padding: 120px 8%;
+  background: #ffffff;
+  overflow: hidden;
 }
 
-.gallery .container{
-    max-width:1300px;
-    margin:auto;
+.gallery .container {
+  max-width: 1450px;
+  margin: auto;
 }
 
-/*=========================
+/*=========================================
 HEADER
-=========================*/
+=========================================*/
 
-.gallery-header{
-
-    text-align:center;
-    margin-bottom:70px;
-
+.gallery-header {
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-.section-tag{
-
-    display:inline-block;
-
-    background:#ECE7E1;
-
-    color:#8B7355;
-
-    padding:8px 18px;
-
-    border-radius:999px;
-
-    font-size:.85rem;
-
-    font-weight:600;
-
-    letter-spacing:1px;
-
+.section-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ece7e1;
+  color: #8b7355;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.gallery-header h2{
-
-    margin-top:20px;
-
-    font-size:clamp(2.3rem,5vw,4rem);
-
-    font-family:"Playfair Display",serif;
-
-    color:#2E2E2E;
-
-    line-height:1.2;
-
+.gallery-header h2 {
+  margin-top: 20px;
+  font-size: clamp(2.5rem,5vw,4.3rem);
+  line-height: 1.15;
+  font-family: "Playfair Display", serif;
+  color: #2d2d2d;
 }
 
-.gallery-header h2 span{
-
-    color:#8B7355;
-
+.gallery-header h2 span {
+  color: #8b7355;
 }
 
-.gallery-header p{
-
-    max-width:720px;
-
-    margin:22px auto 0;
-
-    color:#666;
-
-    line-height:1.8;
-
-    font-size:1.05rem;
-
+.gallery-header p {
+  max-width: 700px;
+  margin: 22px auto 0;
+  line-height: 1.8;
+  color: #666;
+  font-size: 1.05rem;
 }
 
-/*=========================
-GRID
-=========================*/
+/*=========================================
+SLIDER
+=========================================*/
 
-.gallery-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:28px;
-
+.gallery-slider-wrapper {
+  position: relative;
 }
 
-/*=========================
+.gallery-swiper {
+  padding: 35px 0 70px;
+}
+
+/*=========================================
 CARD
-=========================*/
+=========================================*/
 
-.gallery-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    cursor:pointer;
-
-    transition:.4s;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.06);
-
+.project-card {
+  transition: .45s;
+  transform: scale(.88);
 }
 
-.gallery-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 30px 60px rgba(0,0,0,.12);
-
+.swiper-slide-active .project-card {
+  transform: scale(1);
 }
 
-/*=========================
-IMAGE
-=========================*/
-
-.gallery-image{
-
-    height:420px;
-
-    background:linear-gradient(
-        135deg,
-        #ECE7E1,
-        #D8CBB8
-    );
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+.project-image {
+  height: 560px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #ece7e1;
+  box-shadow: 0 20px 45px rgba(0,0,0,.10);
+  
+  position: relative; /* Requerido para el overlay */
 }
 
-.placeholder{
-
-    width:120px;
-
-    height:120px;
-
-    border:2px dashed #8B7355;
-
-    border-radius:18px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#8B7355;
-
-    font-weight:600;
-
-    letter-spacing:1px;
-
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .7s;
 }
 
-/*=========================
-OVERLAY
-=========================*/
-
-.gallery-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    padding:30px;
-
-    background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.75)
-    );
-
-    opacity:0;
-
-    transition:.35s;
-
+.project-card:hover img {
+  transform: scale(1.08);
 }
 
-.gallery-card:hover .gallery-overlay{
+/*=========================================
+OVERLAY (MÁGIA DEL TEXTO - DISEÑO PREMIUM)
+=========================================*/
 
-    opacity:1;
-
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Fondo oscuro elegante y semi-transparente */
+  background: rgba(30, 30, 30, 0.85);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px; /* Buen espacio para que el texto respire */
+  text-align: center;
+  
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 10;
 }
 
-.gallery-overlay h3{
-
-    color:white;
-
-    font-size:1.5rem;
-
-    margin-bottom:8px;
-
-    font-family:"Playfair Display",serif;
-
+.project-overlay p {
+  color: #ffffff; /* Texto blanco para máximo contraste */
+  
+  /* Texto mucho más grande y con tipografía elegante */
+  font-size: 1.7rem; 
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Efecto de deslizarse hacia arriba */
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
-.gallery-overlay span{
-
-    color:#E8D9C3;
-
-    font-size:.95rem;
-
+.project-card:hover .project-overlay {
+  opacity: 1;
 }
 
-/*=========================
+.project-card:hover .project-overlay p {
+  transform: translateY(0);
+}
+
+/*=========================================
+PLACEHOLDER
+=========================================*/
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #ece7e1,
+    #d7c8b5
+  );
+
+  color: #8b7355;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/*=========================================
+INFO
+=========================================*/
+
+.project-info {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.project-info span {
+  color: #8b7355;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .82rem;
+}
+
+.project-info h3 {
+  margin: 10px 0 22px;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #2e2e2e;
+}
+
+/*=========================================
+ARROWS
+=========================================*/
+
+.gallery-prev,
+.gallery-next {
+  position: absolute;
+  top: 42%;
+  width: 54px;
+  height: 54px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: white;
+  color: #8b7355;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .35s;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  transform: scale(1.08);
+  background: #8b7355;
+  color: white;
+}
+
+.gallery-prev {
+  left: -15px;
+}
+
+.gallery-next {
+  right: -15px;
+}
+
+/*=========================================
+PAGINATION
+=========================================*/
+
+.swiper-pagination {
+  margin-top: 15px;
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  opacity: .4;
+  background: #8b7355;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/*=========================================
 RESPONSIVE
-=========================*/
+=========================================*/
 
-@media(max-width:1100px){
-
-.gallery-grid{
-
-grid-template-columns:repeat(2,1fr);
-
+@media (max-width:1200px){
+  .project-image{
+    height:480px;
+  }
 }
 
+@media (max-width:992px){
+  .gallery{
+    padding:100px 6%;
+  }
+  .project-image{
+    height:430px;
+  }
+  .project-info h3{
+    font-size:1.7rem;
+  }
 }
 
-@media(max-width:768px){
-
-.gallery{
-
-padding:90px 6%;
-
+@media (max-width:768px){
+  .gallery-header{
+    margin-bottom:50px;
+  }
+  .gallery-header h2{
+    font-size:2.2rem;
+  }
+  .gallery-swiper{
+    padding-bottom:60px;
+  }
+  .project-card{
+    transform:scale(1);
+  }
+  .project-image{
+    height:380px;
+  }
+  .gallery-prev,
+  .gallery-next{
+    display:none;
+  }
 }
 
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-image{
-
-height:340px;
-
-}
-
-.gallery-header{
-
-margin-bottom:50px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.gallery-header h2{
-
-font-size:2rem;
-
-}
-
-.gallery-image{
-
-height:300px;
-
-}
-
+@media (max-width:480px){
+  .gallery{
+    padding:80px 5%;
+  }
+  .project-image{
+    height:300px;
+    border-radius:22px;
+  }
+  .project-info h3{
+    font-size:1.4rem;
+  }
+  /* En celulares hacemos la letra un poco más chica para que quepa bien */
+  .project-overlay p {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
 }

@@ -99,12 +99,12 @@ export default function Footer() {
 
               <div>
                 <Mail size={18} />
-                <span>hello@k3homestyle.com</span>
+                <span>info@k3homestyle.com</span>
               </div>
 
               <div>
                 <Phone size={18} />
-                <span>+1 (000) 000-0000</span>
+                <span>+1 (409) 651-3454</span>
               </div>
 
               <div>

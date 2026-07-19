@@ -1,254 +1,209 @@
 /*=========================
-FOOTER
+FOOTER - DISEÑO PREMIUM
 =========================*/
 
-.footer{
-    background:#2E2E2E;
-    color:#fff;
-    padding:90px 8% 30px;
+.footer {
+    /* Un tono sutilmente más rico y profundo */
+    background: #2b2b2b; 
+    color: #fff;
+    /* Un poco más de aire (padding) arriba para que respire */
+    padding: 100px 8% 40px; 
 }
 
-.footer .container{
-    max-width:1280px;
-    margin:auto;
+.footer .container {
+    max-width: 1280px;
+    margin: auto;
 }
 
 /*=========================
 GRID
 =========================*/
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.4fr;
-    gap:60px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: 60px;
 }
 
 /*=========================
-LOGO
+LOGO & DESCRIPTION
 =========================*/
 
-.footer-logo{
-    font-size:2rem;
-    font-family:"Playfair Display",serif;
-    margin-bottom:18px;
+.footer-logo {
+    font-size: 2.2rem;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    
+    /* Todo el logo en color dorado/beige */
+    color: #CBB89D; 
 }
 
-.footer-logo span{
-    color:#CBB89D;
+.footer-logo * {
+    color: #CBB89D !important; 
 }
 
-.footer-description{
-    color:#cfcfcf;
-    line-height:1.8;
-    margin-bottom:30px;
-    max-width:360px;
+.footer-description {
+    color: #a0a0a0; /* Gris más elegante */
+    line-height: 1.9;
+    margin-bottom: 35px;
+    max-width: 360px;
+    font-size: 0.95rem;
 }
 
 /*=========================
 SOCIAL
 =========================*/
 
-.footer-social{
-    display:flex;
-    gap:15px;
+.footer-social {
+    display: flex;
+    gap: 16px;
 }
 
-.footer-social a{
-
-    width:44px;
-    height:44px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:50%;
-
-    background:#444;
-
-    color:#fff;
-
-    transition:.35s;
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+    /* Diseño premium: borde fino transparente en lugar de fondo gris sólido */
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    
+    transition: all 0.4s ease;
 }
 
-.footer-social a:hover{
-
-    background:#CBB89D;
-
-    color:#2E2E2E;
-
-    transform:translateY(-5px);
-
+.footer-social a:hover {
+    background: #CBB89D;
+    border-color: #CBB89D;
+    color: #2b2b2b;
+    transform: translateY(-5px);
+    /* Resplandor sutil al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(203, 184, 157, 0.3); 
 }
 
 /*=========================
 TITLES
 =========================*/
 
-.footer-column h3{
-
-    margin-bottom:22px;
-
-    color:#fff;
-
-    font-size:1.15rem;
-
+.footer-column h3 {
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 0.95rem;
+    
+    /* Títulos en mayúscula y separados para dar un look editorial */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 /*=========================
-LISTS
+LISTS (ENLACES)
 =========================*/
 
-.footer-column ul{
-
-    list-style:none;
-
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-column ul li{
-
-    margin-bottom:14px;
-
-    color:#cfcfcf;
-
-    transition:.3s;
-
+.footer-column ul li {
+    margin-bottom: 16px;
 }
 
-.footer-column ul li a{
-
-    color:#cfcfcf;
-
-    text-decoration:none;
-
-    transition:.3s;
-
+.footer-column ul li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    display: inline-block; /* Necesario para el efecto de movimiento */
+    transition: all 0.3s ease;
 }
 
-.footer-column ul li:hover{
-
-    color:#CBB89D;
-
-}
-
-.footer-column ul li a:hover{
-
-    color:#CBB89D;
-
+.footer-column ul li a:hover {
+    color: #CBB89D;
+    /* Efecto: El texto se desliza levemente a la derecha al hacer hover */
+    transform: translateX(6px); 
 }
 
 /*=========================
 CONTACT
 =========================*/
 
-.footer-contact{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.footer-contact div{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:#cfcfcf;
-
+.footer-contact div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
 }
 
-.footer-contact svg{
+.footer-contact div:hover {
+    color: #fff;
+}
 
-    color:#CBB89D;
-
+.footer-contact svg, 
+.footer-contact i {
+    color: #CBB89D;
+    font-size: 1.1rem;
 }
 
 /*=========================
 BOTTOM
 =========================*/
 
-.footer-bottom{
-
-    margin-top:70px;
-
-    border-top:1px solid rgba(255,255,255,.1);
-
-    padding-top:25px;
-
-    text-align:center;
-
+.footer-bottom {
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 30px;
+    text-align: center;
 }
 
-.footer-bottom p{
-
-    color:#bdbdbd;
-
-    font-size:.92rem;
-
+.footer-bottom p {
+    color: #777; /* Color más sutil para no robar atención */
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
 }
 
 /*=========================
 RESPONSIVE
 =========================*/
 
-@media(max-width:1100px){
-
-.footer-grid{
-
-grid-template-columns:repeat(2,1fr);
-
+@media (max-width:1100px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (max-width:768px) {
+    .footer {
+        padding: 80px 6% 30px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .footer-description {
+        max-width: 100%;
+    }
+    .footer-bottom {
+        margin-top: 50px;
+    }
 }
 
-@media(max-width:768px){
-
-.footer{
-
-padding:70px 6% 25px;
-
-}
-
-.footer-grid{
-
-grid-template-columns:1fr;
-
-gap:45px;
-
-}
-
-.footer-description{
-
-max-width:100%;
-
-}
-
-.footer-bottom{
-
-margin-top:50px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.footer-logo{
-
-font-size:1.8rem;
-
-}
-
-.footer-social{
-
-justify-content:flex-start;
-
-}
-
+@media (max-width:480px) {
+    .footer-logo {
+        font-size: 1.9rem;
+    }
+    .footer-social {
+        justify-content: flex-start;
+    }
 }

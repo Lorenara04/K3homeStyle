@@ -1,53 +1,51 @@
 import "./Services.css";
 import {
-  Home,
+  House,
+  Sofa,
   ChefHat,
   Shirt,
-  Package,
-  Sparkles,
+  Car,
+  ToyBrick,
   ArrowRight,
 } from "lucide-react";
-
-const services = [
-  {
-    icon: <Home size={36} />,
-    title: "Home Organization",
-    description:
-      "Create functional, organized and peaceful living spaces tailored to your lifestyle.",
-  },
-  {
-    icon: <Shirt size={36} />,
-    title: "Closet Organization",
-    description:
-      "Maximize your closet space with practical systems that make everyday life easier.",
-  },
-  {
-    icon: <ChefHat size={36} />,
-    title: "Kitchen Organization",
-    description:
-      "Transform your kitchen into an efficient, elegant and easy-to-maintain space.",
-  },
-  {
-    icon: <Package size={36} />,
-    title: "Move-In & Move-Out",
-    description:
-      "Professional unpacking, organization and setup so your new home feels complete from day one.",
-  },
-  {
-    icon: <Sparkles size={36} />,
-    title: "Luxury Styling",
-    description:
-      "Beautiful finishing touches that combine functionality with sophisticated interior styling.",
-  },
-  {
-    icon: <Home size={36} />,
-    title: "Custom Organization",
-    description:
-      "Every project is personalized to meet your family's unique needs and routines.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: <Sofa size={36} />,
+      title: t("services.s0.title"),
+      description: t("services.s0.desc"),
+    },
+    {
+      icon: <House size={36} />,
+      title: t("services.s1.title"),
+      description: t("services.s1.desc"),
+    },
+    {
+      icon: <Shirt size={36} />,
+      title: t("services.s2.title"),
+      description: t("services.s2.desc"),
+    },
+    {
+      icon: <ChefHat size={36} />,
+      title: t("services.s3.title"),
+      description: t("services.s3.desc"),
+    },
+    {
+      icon: <ToyBrick size={36} />,
+      title: t("services.s4.title"),
+      description: t("services.s4.desc"),
+    },
+    {
+      icon: <Car size={36} />,
+      title: t("services.s5.title"),
+      description: t("services.s5.desc"),
+    },
+  ];
+
   return (
     <section className="services section" id="services">
       <div className="container">
@@ -55,18 +53,16 @@ export default function Services() {
         <div className="services-header">
 
           <span className="section-tag">
-            OUR SERVICES
+            {t("services.tag")}
           </span>
 
           <h2>
-            Beautiful Spaces Start
-            <span> With Smart Organization</span>
+            {t("services.title1")}
+            <span> {t("services.title2")}</span>
           </h2>
 
           <p>
-            Every home is different. That's why we create customized
-            organization solutions that combine beauty, comfort and
-            functionality.
+            {t("services.desc")}
           </p>
 
         </div>
@@ -75,7 +71,10 @@ export default function Services() {
 
           {services.map((service, index) => (
 
-            <div className="service-card" key={index}>
+            <div
+              className="service-card"
+              key={index}
+            >
 
               <div className="service-icon">
                 {service.icon}
@@ -85,10 +84,13 @@ export default function Services() {
 
               <p>{service.description}</p>
 
-              <button className="service-btn">
-                Learn More
+              <a href="#contact" className="service-btn">
+
+                {t("services.button")}
+
                 <ArrowRight size={18} />
-              </button>
+
+              </a>
 
             </div>
 

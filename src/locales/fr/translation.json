@@ -1,10 +1,155 @@
 {
   "menu": {
     "home": "Accueil",
+    "promotions": "Promotions",
     "about": "Notre Histoire",
     "services": "Services",
+    "baskets": "Paniers",
     "gallery": "Galerie",
     "contact": "Contact",
-    "button": "Réserver une consultation"
+    "button": "Réserver une Consultation"
+  },
+  "whoWeAre": {
+    "subtitle": "QUI NOUS SOMMES",
+    "title": "Concevoir des maisons pour aider à mieux vivre.",
+    "p1": "Chez K3 Home Style, nous croyons qu'une maison organisée est plus qu'un bel espace. Elle crée la tranquillité d'esprit, améliore la productivité et enrichit la vie quotidienne de chaque membre de la famille.",
+    "p2": "Chaque projet est soigneusement conçu autour du mode de vie de chaque client, en créant des solutions d'organisation fonctionnelles, élégantes et durables.",
+    "button": "Planifier une Consultation",
+    "placeholder": "Bientôt Disponible"
+  },
+  "services": {
+    "tag": "NOS SERVICES",
+    "title1": "Services d'Organisation",
+    "title2": "Conçus Pour Votre Maison",
+    "desc": "Chaque maison est unique. Nous créons des solutions d'organisation sur mesure qui apportent fonctionnalité, beauté et sérénité à chaque espace de votre maison.",
+    "button": "Voir le Service",
+    "s0": { "title": "Home Staging", "desc": "Nous préparons professionnellement votre maison pour le marché en créant des espaces propres, organisés et visuellement attrayants qui attirent plus d'acheteurs, génèrent un plus grand intérêt et aident votre propriété à se démarquer." },
+    "s1": { "title": "Organisation de la Maison", "desc": "Créez des espaces de vie fonctionnels, organisés et paisibles conçus autour du mode de vie et des routines quotidiennes de votre famille." },
+    "s2": { "title": "Organisation de Dressing", "desc": "Maximisez l'espace de votre dressing avec des systèmes sur mesure qui simplifient votre routine quotidienne tout en gardant tout magnifiquement organisé." },
+    "s3": { "title": "Cuisine & Cellier", "desc": "Transformez votre cuisine et votre cellier en espaces organisés et efficaces qui rendent la cuisine, le rangement et la vie quotidienne plus faciles." },
+    "s4": { "title": "Organisation de Salle de Jeux", "desc": "Créez des espaces de jeu pratiques et accueillants où les jouets, les livres et les activités restent organisés tout en restant amusants et fonctionnels pour les enfants." },
+    "s5": { "title": "Organisation de Garage", "desc": "Transformez votre garage en un espace propre, organisé et fonctionnel avec des solutions de rangement intelligentes pour les outils, les articles saisonniers et les essentiels de tous les jours." }
+  },
+  "gallery": {
+    "tag": "NOTRE TRAVAIL",
+    "title1": "Des Espaces Conçus Avec",
+    "title2": "Objectif & Élégance",
+    "desc": "Chaque projet est conçu pour créer des environnements calmes, fonctionnels et magnifiquement organisés qui reflètent le style de vie de chaque client.",
+    "placeholder": "Bientôt Disponible",
+    "i0": { "title": "Organisation de Dressing", "cat": "Organisation de Dressing", "desc": "Des solutions de rangement intelligentes qui maximisent chaque centimètre avec style, organisation et un accès facile à vos vêtements." },
+    "i1": { "title": "Organisation de Cuisine", "cat": "Cuisine & Cellier", "desc": "Des cuisines modernes et fonctionnelles conçues pour un rangement efficace, un confort quotidien et un style intemporel." },
+    "i2": { "title": "Salon Élégant", "cat": "Style de la Maison", "desc": "Des espaces de vie confortables avec des solutions de rangement intelligentes qui gardent tout organisé tout en améliorant le style." },
+    "i3": { "title": "Cellier de Luxe", "cat": "Planification de l'Espace", "desc": "Des solutions de cellier bien organisées qui maximisent le rangement et rendent les essentiels quotidiens faciles d'accès." },
+    "i4": { "title": "Chambre Minimaliste", "cat": "Organisation", "desc": "Des solutions de chambre personnalisées qui allient confort, organisation et atmosphère paisible." },
+    "i5": { "title": "Bureau à Domicile", "cat": "Espace de Travail", "desc": "Des espaces de bureau fonctionnels conçus pour stimuler la productivité avec des aménagements organisés, confortables et élégants." },
+    "i6": { "title": "Salle de Bain Moderne", "cat": "Style de Salle de Bain", "desc": "Des solutions pratiques de rangement de salle de bain qui maximisent l'espace tout en conservant un aspect propre et moderne." }
+  },
+  "baskets": {
+    "title": "Paniers de Rangement Personnalisés par K3 Home Styles",
+    "desc": "Chaque espace organisé mérite un beau rangement. Nos paniers artisanaux sont personnalisés avec des tissus de qualité supérieure, des étiquettes en cuir, des accents en bois et des détails personnalisés pour s'adapter parfaitement à votre maison.",
+    "button": "Passer une Commande",
+    "c0": { "name": "Serenity Collection", "desc": "Salles de Bains" },
+    "c1": { "name": "Modern Pantry Collection", "desc": "Cuisines et Celliers" },
+    "c2": { "name": "Little Dream Collection", "desc": "Chambres d'Enfants" },
+    "c3": { "name": "Laundry Collection", "desc": "" },
+    "c4": { "name": "Signature K3 Collection", "desc": "" },
+    "c5": { "name": "Farmhouse Collection", "desc": "" },
+    "s1": { "title": "Signature K3 Collection", "desc": "Conçue pour chaque espace de votre maison. Doublures amovibles et lavables, étiquettes en cuir K3Homestyles, matériaux naturels et durables." },
+    "s2": { "title": "Jute Rope Collection", "desc": "Des détails qui transforment votre maison. Organisation de style naturel pour des espaces qui inspirent le bien-être." },
+    "s3": { "title": "Serenity Collection", "desc": "Parfaite pour les salles de bains. Gardez vos serviettes et essentiels magnifiquement organisés avec nos conceptions résistantes à l'humidité." },
+    "s4": { "title": "Modern Pantry Collection", "desc": "Élevez le rangement de votre cuisine. Idéal pour organiser les produits secs, les collations et les essentiels de cuisine avec style." },
+    "s5": { "title": "Little Dream Collection", "desc": "Un rangement charmant pour les chambres d'enfants. Parfait pour les jouets, les couvertures et garder l'ordre." }
+  },
+  "process": {
+    "tag": "NOTRE PROCESSUS",
+    "title1": "Comment Nous Transformons",
+    "title2": "Votre Espace",
+    "desc": "Une expérience personnalisée conçue pour créer des espaces fonctionnels, magnifiques et sans stress.",
+    "s0": { "title": "Consultation Gratuite", "desc": "Nous apprenons à connaître votre espace, votre style de vie, vos objectifs, votre budget et vos défis d'organisation." },
+    "s1": { "title": "Plan Personnalisé", "desc": "Nous concevons un plan d'organisation sur mesure et recommandons des solutions de rangement et des produits qui s'adaptent à votre maison." },
+    "s2": { "title": "Jour de Transformation", "desc": "Nous désencombrons, organisons, stylisons, étiquetons et optimisons chaque espace avec une attention aux détails." },
+    "s3": { "title": "Visite Finale", "desc": "Ensemble, nous passons en revue chaque zone, effectuons les derniers ajustements et nous nous assurons de votre satisfaction." },
+    "s4": { "title": "Finition Signature K3", "desc": "Nous ajoutons la touche finale avec de magnifiques paniers, des étiquettes et des détails personnalisés qui rendent votre maison fonctionnelle et élégante." },
+    "s5": { "title": "Entretien & Support", "desc": "Vous recevrez des conseils simples d'organisation et un soutien continu pour aider à garder votre maison organisée bien après le projet." }
+  },
+  "testimonials": {
+    "tag": "TÉMOIGNAGES",
+    "title1": "Ce Que Disent",
+    "title2": "Nos Clients",
+    "desc": "Notre plus grande satisfaction vient d'aider les familles à créer des maisons organisées, fonctionnelles et belles qu'elles apprécient vraiment.",
+    "t0": { "name": "Sarah Johnson", "role": "Propriétaire", "text": "K3 Home Style a complètement transformé ma maison. Chaque pièce semble plus fonctionnelle, élégante et organisée que je n'aurais jamais imaginé." },
+    "t1": { "name": "Emily Carter", "role": "Client de Design d'Intérieur", "text": "L'attention aux détails était incroyable. Tout le processus a été fluide, professionnel et a dépassé toutes mes attentes." },
+    "t2": { "name": "Michael Brown", "role": "Organisation de la Maison", "text": "Je n'aurais jamais pensé que l'organisation pourrait complètement changer notre façon de vivre. Notre maison semble plus grande, plus calme et beaucoup plus facile à entretenir." }
+  },
+  "contact": {
+    "tag": "CONTACTEZ-NOUS",
+    "title1": "Créons Ensemble",
+    "title2": "Une Plus Belle Maison",
+    "desc": "Prêt à transformer votre maison en un espace fonctionnel, organisé et magnifique ? Nous serions ravis de connaître votre projet.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "hq": "Siège Social",
+    "hq_city": "Beaumont, Texas",
+    "hours": "Heures d'Ouverture",
+    "hours_1": "Sur Rendez-vous",
+    "hours_2": "Horaires Flexibles",
+    "follow": "Suivez-Nous",
+    "coming_soon": "Bientôt Disponible",
+    "form": {
+      "name": "Nom Complet",
+      "name_ph": "Jean Dupont",
+      "email": "Adresse E-mail",
+      "email_ph": "vous@email.com",
+      "phone": "Numéro de Téléphone",
+      "phone_ph": "+1 000 000 0000",
+      "msg": "Message",
+      "msg_ph": "Parlez-nous de votre projet...",
+      "send": "Envoyer le Message"
+    },
+    "map_title": "Fiers de Desservir le Texas",
+    "map_desc": "K3 Home Style propose des services professionnels d'organisation, de décoration et de stylisme dans nos principales zones de service, notamment :",
+    "success": "Message envoyé avec succès ! Nous vous contacterons bientôt.",
+    "error": "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.",
+    "conn_error": "Erreur de connexion lors de l'envoi du message."
+  },
+  "footer": {
+    "desc": "Nous transformons les maisons en espaces calmes, fonctionnels et magnifiques grâce à une organisation personnalisée et un style intérieur.",
+    "links": "Liens Rapides",
+    "services_title": "Services",
+    "s1": "Organisation de la Maison",
+    "s2": "Organisation de Dressing",
+    "s3": "Organisation de Cuisine",
+    "s4": "Emménagement & Déménagement",
+    "s5": "Style d'Espace de Luxe",
+    "contact": "Contact",
+    "serving": "Au service de votre région",
+    "rights": "K3 Home Style. Tous droits réservés."
+  },
+  "promo": {
+    "tag": "RÉINITIALISATION D'ÉTÉ",
+    "title1": "Commencez la seconde moitié de l'année",
+    "title2": "Organisé & Sans stress",
+    "desc": "Réservez votre service d'organisation de maison en juillet et bénéficiez d'avantages exclusifs:",
+    "b1": "15% de réduction lorsque vous organisez une deuxième zone de votre maison.",
+    "b2": "Étiquettes personnalisées GRATUITES pour garde-manger ou salle de bain.",
+    "b3": "Consultation d'organisation de 20 minutes offerte.",
+    "b4": "Remise spéciale sur vos paniers K3homestyles en réservant un service.",
+    "focus": "Idéal pour : Garde-manger, Cuisines, Placards, Salles de jeux, Salles de bains et Buanderies.",
+    "areas": "Desservant Beaumont, Port Arthur, Orange, Port Acres, China TX, Nederland, Groves, Houston, Austin, Fort Worth, TX.",
+    "button": "Réservez votre réinitialisation d'été dès aujourd'hui"
+  },
+  "beforeAfter": {
+    "tag": "TRANSFORMATIONS",
+    "title1": "Incroyables",
+    "title2": "Avant & Après",
+    "desc": "Faites glisser pour voir la magie d'un espace magnifiquement organisé.",
+    "tabs": {
+      "t0": "Chambres",
+      "t1": "Garde-manger",
+      "t2": "Cuisines",
+      "t3": "Salon",
+      "t4": "Salles de Bains",
+      "t5": "Placards"
+    }
   }
 }

@@ -1,25 +1,28 @@
 import "./Testimonials.css";
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    role: "Homeowner",
-    text: "K3 Home Style completely transformed my home. Every room feels more functional, elegant and organized than I ever imagined.",
-  },
-  {
-    name: "Emily Carter",
-    role: "Interior Design Client",
-    text: "The attention to detail was incredible. The entire process was smooth, professional and exceeded all my expectations.",
-  },
-  {
-    name: "Michael Brown",
-    role: "Home Organization",
-    text: "I never thought organization could completely change the way we live. Our home feels bigger, calmer and much easier to maintain.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Testimonials() {
+  const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      name: t("testimonials.t0.name"),
+      role: t("testimonials.t0.role"),
+      text: t("testimonials.t0.text"),
+    },
+    {
+      name: t("testimonials.t1.name"),
+      role: t("testimonials.t1.role"),
+      text: t("testimonials.t1.text"),
+    },
+    {
+      name: t("testimonials.t2.name"),
+      role: t("testimonials.t2.role"),
+      text: t("testimonials.t2.text"),
+    },
+  ];
+
   return (
     <section className="testimonials section" id="testimonials">
       <div className="container">
@@ -27,17 +30,16 @@ export default function Testimonials() {
         <div className="testimonials-header">
 
           <span className="section-tag">
-            TESTIMONIALS
+            {t("testimonials.tag")}
           </span>
 
           <h2>
-            What Our Clients
-            <span> Say About Us</span>
+            {t("testimonials.title1")}
+            <span> {t("testimonials.title2")}</span>
           </h2>
 
           <p>
-            Our greatest satisfaction comes from helping families create
-            organized, functional and beautiful homes they truly enjoy.
+            {t("testimonials.desc")}
           </p>
 
         </div>

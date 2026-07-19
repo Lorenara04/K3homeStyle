@@ -4,61 +4,77 @@ import {
   ClipboardList,
   Sparkles,
   CheckCircle,
+  Home,
+  HeartHandshake,
 } from "lucide-react";
-
-const steps = [
-  {
-    icon: <MessageCircle size={32} />,
-    number: "01",
-    title: "Initial Consultation",
-    description:
-      "We begin by understanding your lifestyle, goals and the challenges of your space.",
-  },
-  {
-    icon: <ClipboardList size={32} />,
-    number: "02",
-    title: "Personalized Planning",
-    description:
-      "A customized organization plan is created specifically for your home and needs.",
-  },
-  {
-    icon: <Sparkles size={32} />,
-    number: "03",
-    title: "Transformation Day",
-    description:
-      "Our team organizes, styles and optimizes every area with attention to every detail.",
-  },
-  {
-    icon: <CheckCircle size={32} />,
-    number: "04",
-    title: "Final Walkthrough",
-    description:
-      "Together we review the completed project and ensure everything exceeds expectations.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Process() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      icon: <MessageCircle size={32} />,
+      number: "01",
+      title: t("process.s0.title"),
+      description: t("process.s0.desc"),
+    },
+    {
+      icon: <ClipboardList size={32} />,
+      number: "02",
+      title: t("process.s1.title"),
+      description: t("process.s1.desc"),
+    },
+    {
+      icon: <Sparkles size={32} />,
+      number: "03",
+      title: t("process.s2.title"),
+      description: t("process.s2.desc"),
+    },
+    {
+      icon: <CheckCircle size={32} />,
+      number: "04",
+      title: t("process.s3.title"),
+      description: t("process.s3.desc"),
+    },
+    {
+      icon: <Home size={32} />,
+      number: "05",
+      title: t("process.s4.title"),
+      description: t("process.s4.desc"),
+    },
+    {
+      icon: <HeartHandshake size={32} />,
+      number: "06",
+      title: t("process.s5.title"),
+      description: t("process.s5.desc"),
+    },
+  ];
+
   return (
     <section className="process section" id="process">
       <div className="container">
 
+        {/* ================= HEADER ================= */}
+
         <div className="process-header">
 
           <span className="section-tag">
-            OUR PROCESS
+            {t("process.tag")}
           </span>
 
           <h2>
-            How We Transform
-            <span> Your Space</span>
+            {t("process.title1")}
+            <span> {t("process.title2")}</span>
           </h2>
 
           <p>
-            A simple and personalized experience designed to make your home
-            more functional, beautiful and stress-free.
+            {t("process.desc")}
           </p>
 
         </div>
+
+        {/* ================= TIMELINE ================= */}
 
         <div className="timeline">
 

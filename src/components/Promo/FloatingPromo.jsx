@@ -2,14 +2,17 @@ import { useState } from "react";
 import { X, PercentCircle } from "lucide-react";
 import "./FloatingPromo.css";
 
+import { useTranslation } from "react-i18next";
+
 export default function FloatingPromo() {
   const [promoOpen, setPromoOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
       <button className="floating-promo-btn" onClick={() => setPromoOpen(true)}>
-        <span className="promo-badge">15% OFF</span>
-        <span className="promo-text">Summer Promo</span>
+        <span className="promo-badge">{t("promo.badge")}</span>
+        <span className="promo-text">{t("promo.text")}</span>
       </button>
 
       {promoOpen && (

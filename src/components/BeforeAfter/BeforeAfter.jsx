@@ -18,6 +18,14 @@ export default function BeforeAfter() {
     { id: "t5", title: t("beforeAfter.tabs.t5"), img: "/BeforeAfter/before&after6.jpg" }
   ];
 
+  // Preload images so they show up instantly when clicking tabs
+  useEffect(() => {
+    tabs.forEach((tab) => {
+      const img = new Image();
+      img.src = tab.img;
+    });
+  }, []);
+
   return (
     <section className="before-after-section section" id="transformations">
       <div className="container">

@@ -32,6 +32,7 @@ function Navbar() {
           <a href="#about">{t("menu.about")}</a>
           <a href="#services">{t("menu.services")}</a>
           <a href="#baskets">{t("menu.baskets")}</a>
+          <a href="#transformations">{t("menu.beforeAfter")}</a>
           <a href="#gallery">{t("menu.gallery")}</a>
           <a href="#contact">{t("menu.contact")}</a>
         </nav>
@@ -72,6 +73,7 @@ function Navbar() {
           <a href="#about" onClick={() => setMenuOpen(false)}>{t("menu.about")}</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>{t("menu.services")}</a>
           <a href="#baskets" onClick={() => setMenuOpen(false)}>{t("menu.baskets")}</a>
+          <a href="#transformations" onClick={() => setMenuOpen(false)}>{t("menu.beforeAfter")}</a>
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{t("menu.gallery")}</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>{t("menu.contact")}</a>
         </nav>

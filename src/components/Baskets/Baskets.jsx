@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Baskets() {
   const { t } = useTranslation();
@@ -146,7 +147,14 @@ export default function Baskets() {
         </div>
 
         <div className="baskets-cta">
-          <a href="#contact" className="btn-baskets">
+          <a 
+            href="https://wa.me/14096513454?text=Hello!%20I%20would%20like%20to%20get%20a%20quote"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-baskets"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+          >
+            <FaWhatsapp size={20} />
             {t("baskets.button")}
           </a>
         </div>

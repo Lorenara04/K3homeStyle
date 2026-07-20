@@ -75,15 +75,15 @@ export default function Footer() {
 
             <ul>
 
-              <li>Home Organization</li>
+              <li><a href="#services">Home Organization</a></li>
 
-              <li>Closet Organization</li>
+              <li><a href="#services">Closet Organization</a></li>
 
-              <li>Kitchen Organization</li>
+              <li><a href="#services">Kitchen Organization</a></li>
 
-              <li>Move-In & Move-Out</li>
+              <li><a href="#services">Move-In & Move-Out</a></li>
 
-              <li>Luxury Space Styling</li>
+              <li><a href="#services">Luxury Space Styling</a></li>
 
             </ul>
 

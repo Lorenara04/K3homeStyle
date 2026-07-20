@@ -1,7 +1,7 @@
 import "./Contact.css";
 import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -119,6 +119,15 @@ export default function Contact() {
                 >
                   <FaFacebookF size={30} />
                   <span>Facebook</span>
+                </a>
+                <a
+                  href="https://wa.me/14096513454?text=Hello!%20I%20would%20like%20to%20get%20a%20quote"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-item"
+                >
+                  <FaWhatsapp size={30} />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

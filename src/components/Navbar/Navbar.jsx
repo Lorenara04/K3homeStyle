@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import logo from "../../assets/images/logo/logo-primary.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,7 +55,9 @@ function Navbar() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-navbar"
+            style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
           >
+            <FaWhatsapp size={18} />
             {t("menu.button")}
           </a>
 
@@ -98,7 +101,9 @@ function Navbar() {
             rel="noopener noreferrer" 
             className="btn-navbar" 
             onClick={() => setMenuOpen(false)}
+            style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}
           >
+            <FaWhatsapp size={18} />
             {t("menu.button")}
           </a>
         </div>

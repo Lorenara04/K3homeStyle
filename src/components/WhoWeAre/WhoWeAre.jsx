@@ -1,6 +1,7 @@
 import "./WhoWeAre.css";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FaWhatsapp } from "react-icons/fa";
 
 // ===============================
 // IMÁGENES
@@ -104,10 +105,13 @@ function WhoWeAre() {
           </p>
 
           <a
-            href="#contact"
+            href="https://wa.me/14096513454?text=Hello!%20I%20would%20like%20to%20get%20a%20quote"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="btn-primary"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
           >
-
+            <FaWhatsapp size={20} />
             {t("whoWeAre.button")}
 
           </a>

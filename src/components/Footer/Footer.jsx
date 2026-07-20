@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaTiktok,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -39,6 +40,10 @@ export default function Footer() {
 
               <a href="https://www.tiktok.com/@k3homestyle?_r=1&_t=ZS-97gVjaGaFmC" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <FaTiktok />
+              </a>
+
+              <a href="https://wa.me/14096513454?text=Hello!%20I%20would%20like%20to%20get%20a%20quote" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <FaWhatsapp />
               </a>
 
             </div>

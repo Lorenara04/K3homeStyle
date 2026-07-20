@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
+  FaTiktok,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -29,16 +29,16 @@ export default function Footer() {
 
             <div className="footer-social">
 
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/k3homestyle/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
 
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/k3homestyle/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
 
-              <a href="#" aria-label="LinkedIn">
-                <FaLinkedinIn />
+              <a href="https://www.tiktok.com/@k3homestyle?_r=1&_t=ZS-97gVjaGaFmC" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <FaTiktok />
               </a>
 
             </div>

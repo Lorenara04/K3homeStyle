@@ -15,12 +15,6 @@ export default function Gallery() {
 
   const galleryItems = [
     {
-      title: t("gallery.i0.title"),
-      category: t("gallery.i0.cat"),
-      image: "/Gallery/closet.jpeg",
-      description: t("gallery.i0.desc")
-    },
-    {
       title: t("gallery.i1.title"),
       category: t("gallery.i1.cat"),
       image: "/Gallery/kitchen.png",
@@ -49,12 +43,6 @@ export default function Gallery() {
       category: t("gallery.i5.cat"),
       image: "/Gallery/office.png",
       description: t("gallery.i5.desc")
-    },
-    {
-      title: t("gallery.i6.title"),
-      category: t("gallery.i6.cat"),
-      image: "/Gallery/bathroom.jpeg",
-      description: t("gallery.i6.desc")
     },
   ];
 

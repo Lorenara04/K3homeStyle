@@ -13,9 +13,7 @@ export default function BeforeAfter() {
     { id: "t0", title: t("beforeAfter.tabs.t0"), img: "/BeforeAfter/before&after1.png" },
     { id: "t1", title: t("beforeAfter.tabs.t1"), img: "/BeforeAfter/before&after2.png" },
     { id: "t2", title: t("beforeAfter.tabs.t2"), img: "/BeforeAfter/before&after3.png" },
-    { id: "t3", title: t("beforeAfter.tabs.t3"), img: "/BeforeAfter/before&after4.png" },
-    { id: "t4", title: t("beforeAfter.tabs.t4"), img: "/BeforeAfter/before&after5.jpg" },
-    { id: "t5", title: t("beforeAfter.tabs.t5"), img: "/BeforeAfter/before&after6.jpg" }
+    { id: "t3", title: t("beforeAfter.tabs.t3"), img: "/BeforeAfter/before&after4.png" }
   ];
 
   // Preload images so they show up instantly when clicking tabs
